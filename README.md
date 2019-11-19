@@ -1,16 +1,20 @@
 # Dart compared to TypeScript
 Examples for Dart code compared to TypeScript code
 
-#### Packages
-```bash
-[TypeScript]
+### Packages
+---
+#### TypeScript
+```
 package.json // NPM
-[Dart]
+```
+#### Dart
+```
 pubspec.yaml // Pub
 ```
 
-#### Comments
-[TypeScript]
+### Comments
+---
+#### TypeScript
 ```ts
 // single line comment
 /* 
@@ -18,7 +22,7 @@ pubspec.yaml // Pub
 */
 ```
 
-[Dart]
+#### Dart
 ```dart
 // single line comment
 // 
@@ -27,18 +31,20 @@ pubspec.yaml // Pub
 /// documentation comment
 ```
 
-#### Logging
-[TypeScript]
+### Logging
+---
+#### TypeScript
 ```ts
 console.log('TypeScript code');
 ```
-[Dart]
+#### Dart
 ```dart
 print('Dart code');
 ```
 
-#### Basic types
-[TypeScript]
+### Basic types
+---
+#### TypeScript
 ```ts
 const boolType: boolean = true;
 const numberType: number = 5;
@@ -47,7 +53,7 @@ const arrayType: [] = [];
 const anyType: any = 'John'; // Can be anything;
 const tupleType: [string, number] = ['John', 5];
 ```
-[Dart]
+#### Dart
 ```dart
 final bool boolType = true;
 final int numberType = 5;
@@ -57,14 +63,15 @@ final List listType = [];
 final dynamic dynamicType = 'John'; // Can be anything;
 ```
 
-#### Variables
-[TypeScript]
+### Variables
+---
+#### TypeScript
 ```ts
 var a: string = 'a';
 let b: string = 'b';
 const c: string = 'c';
 ```
-[Dart]
+#### Dart
 ```dart
 var a = 'a';
 -
@@ -72,15 +79,16 @@ final String c = 'c'; // runtime constant
 const c = 'c'; // compile time constant / freezing 
 ```
 
-#### Interpolation
-[TypeScript]
+### Interpolation
+---
+#### TypeScript
 ```ts
 firstName: string = 'John';
 lastName: string = 'Doe';
 console.log(`This is ${firstName} ${lastName})
 ```
 
-[Dart]
+#### Dart
 ```dart
 final String firstName = 'John';
 final String lastName = 'Doe';
@@ -88,63 +96,68 @@ final String lastName = 'Doe';
 print('This is $firstName $lastName')
 ```
 
-#### Arrays
-[TypeScript]
+### Arrays
+---
+#### TypeScript
 ```ts
 const persons: string[] = ['John', 'William'];
 ```
-[Dart]
+#### Dart
 ```dart
 final List<String> persons = ['John', 'William'];
 ```
 
-#### Functions
-[TypeScript]
+### Functions
+---
+#### TypeScript
 ```ts
 function add(a: number, b: number): number {
   return a + b;
 }
 ```
-[Dart]
+#### Dart
 ```dart
 int add(int a, int b) {
   return a + b;
 }
 ```
 
-#### Async functions
-[TypeScript]
+### Async functions
+---
+#### TypeScript
 ```ts
 async function add(a: number, b: number): number {
   return a + b;
 }
 ```
-[Dart]
+#### Dart
 ```dart
 Future<int> add(int a, int b) async {
   return a + b;
 }
 ```
 
-#### Classes
-[TypeScript]
+### Classes
+---
+#### TypeScript
 ```ts
 export class Foo {}
 ```
-[Dart/Flutter]
+#### Dart/Flutter
 ```dart
 class Foo extends StatelessWidget  {}
 class Foo extends StatefulWidget  {}
 ```
 
-#### Constructor
-[TypeScript]
+### Constructor
+---
+#### TypeScript
 ```ts
 export class Foo {
    constructor() {}  
 }
 ```
-[Dart/Flutter]
+#### Dart/Flutter
 ```dart
 class Foo extends StatelessWidget  {
    Foo() {}
