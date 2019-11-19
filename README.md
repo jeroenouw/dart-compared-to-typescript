@@ -83,8 +83,9 @@ const c = 'c'; // compile time constant / freezing
 ---
 #### TypeScript
 ```ts
-firstName: string = 'John';
-lastName: string = 'Doe';
+const firstName: string = 'John';
+const lastName: string = 'Doe';
+
 console.log(`This is ${firstName} ${lastName})
 ```
 
@@ -93,7 +94,7 @@ console.log(`This is ${firstName} ${lastName})
 final String firstName = 'John';
 final String lastName = 'Doe';
 
-print('This is $firstName $lastName')
+print('This is $firstName $lastName');
 ```
 
 ### Arrays
