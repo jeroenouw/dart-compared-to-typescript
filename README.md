@@ -108,6 +108,26 @@ const persons: string[] = ['John', 'William'];
 final List<String> persons = ['John', 'William'];
 ```
 
+### Objects
+---
+```ts
+const personsObject = {
+  name: 'John';
+};
+
+console.log(personsObject.name)  // John
+```
+
+```dart
+class Persons {
+  String name;
+  name = 'John';
+}
+
+var peopleObject = Persons();
+print(peopleObject.name) // John
+```
+
 ### Functions
 ---
 #### TypeScript
@@ -161,6 +181,23 @@ export class Foo {
 #### Dart/Flutter
 ```dart
 class Foo extends StatelessWidget  {
-   Foo() {}
+  Foo({})
 }
 ```
+### Overwritting classes
+---
+
+#### TypeScript
+```ts
+export class Foo {
+   constructor() {
+     super()
+   }
+}
+```
+
+#### Dart/Flutter
+```dart
+class Foo  {
+  Foo({Key key}) : super(key:key);
+}
