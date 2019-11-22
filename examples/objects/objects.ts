@@ -1,5 +1,5 @@
-const peopleObject = {
-    name: 'John',
+const person = {
+  name: 'John',
 };
 
-console.log(peopleObject.name)  // John
+console.log(person.name)  // John
