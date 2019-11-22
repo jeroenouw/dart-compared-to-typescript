@@ -1,3 +1,6 @@
 export class Foo {
-    constructor() {}  
+    person: string;
+    constructor(name) {
+        this.person = name;
+    }  
 }

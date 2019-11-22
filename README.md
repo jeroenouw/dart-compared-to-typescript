@@ -111,17 +111,16 @@ final List<String> persons = ['John', 'William'];
 ### Objects
 ---
 ```ts
-const personsObject = {
-  name: 'John';
+const peopleObject = {
+  name: 'John',
 };
 
-console.log(personsObject.name)  // John
+console.log(peopleObject.name)  // John
 ```
 
 ```dart
-class Persons {
-  String name;
-  name = 'John';
+class People {
+  String name = 'John';
 }
 
 var peopleObject = Persons();
@@ -175,16 +174,21 @@ class Foo extends StatefulWidget  {}
 #### TypeScript
 ```ts
 export class Foo {
-   constructor() {}  
+    person: string;
+    constructor(name) {
+        this.person = name;
+    }  
 }
+
 ```
 #### Dart/Flutter
 ```dart
-class Foo extends StatelessWidget  {
-  Foo({})
+class Foo {
+  String person;
+  Foo({ this.person })
 }
 ```
-### Overwritting classes
+### Overwriting classes
 ---
 
 #### TypeScript
@@ -201,3 +205,4 @@ export class Foo {
 class Foo  {
   Foo({Key key}) : super(key:key);
 }
+```

@@ -1,3 +1,4 @@
-class Foo extends StatelessWidget  {
-  Foo({})
+class Foo {
+  String person;
+  Foo({ this.person })
 }
