@@ -1,5 +1,7 @@
 # Dart compared to TypeScript
-Examples for Dart code compared to TypeScript code
+Examples for Dart code compared to TypeScript code.
+
+You can easily try all Dart examples on https://dartpad.dartlang.org/ and TypeScript examples on http://www.typescriptlang.org/play/
 
 ### Packages
 ---
@@ -108,6 +110,25 @@ const persons: string[] = ['John', 'William'];
 final List<String> persons = ['John', 'William'];
 ```
 
+### Objects
+---
+```ts
+const person = {
+  name: 'John',
+};
+
+console.log(person.name)  // John
+```
+
+```dart
+class Person {
+  String name = 'John';
+}
+
+var person = Person();
+print(person.name) // John
+```
+
 ### Functions
 ---
 #### TypeScript
@@ -155,12 +176,35 @@ class Foo extends StatefulWidget  {}
 #### TypeScript
 ```ts
 export class Foo {
-   constructor() {}  
+    person: string;
+    constructor(name) {
+        this.person = name;
+    }  
 }
 ```
+
 #### Dart/Flutter
 ```dart
-class Foo extends StatelessWidget  {
-   Foo() {}
+class Foo {
+  String person;
+  Foo({ this.person })
+}
+```
+### Overwriting classes
+---
+
+#### TypeScript
+```ts
+export class Foo {
+   constructor() {
+     super()
+   }
+}
+```
+
+#### Dart/Flutter
+```dart
+class Foo  {
+  Foo({Key key}) : super(key:key);
 }
 ```
