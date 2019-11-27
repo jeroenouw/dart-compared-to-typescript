@@ -112,6 +112,7 @@ final List<String> persons = ['John', 'William'];
 
 ### Objects
 ---
+#### TypeScript
 ```ts
 const person = {
   name: 'John',
@@ -119,8 +120,16 @@ const person = {
 
 console.log(person.name)  // John
 ```
-
+#### Dart
 ```dart
+// As a map
+Map person = {
+  'name': 'John'
+}
+
+print(person['name']) // John
+
+// As a class
 class Person {
   String name = 'John';
 }
@@ -192,7 +201,6 @@ class Foo {
 ```
 ### Overwriting classes
 ---
-
 #### TypeScript
 ```ts
 export class Foo {
@@ -207,4 +215,38 @@ export class Foo {
 class Foo  {
   Foo({Key key}) : super(key:key);
 }
+```
+
+### Working with JSON
+
+#### TypeScript
+```ts
+const person = {
+  name: "John Doe" 
+}
+// stringify
+const personJson = JSON.stringify(person);
+console.log(personJson); // '{ "name": "John Doe", "age": 33 }'
+
+// parse
+const personObject = JSON.parse('{ "name": "John Doe", "age": 33 }');
+console.log(personObject.name) // John Doe
+```
+
+#### Dart/Flutter
+```dart
+import 'dart:convert';
+
+Map person = {
+  "name": "John Doe"
+};
+
+// stringify
+var personJson = jsonEncode(person);
+print(personJson); // '{ "name": "John Doe", "age": 33 }'
+
+// parse
+Map personMap = jsonDecode('{ "name": "John Doe", "age": 33 }');
+print(personMap["name"]) // John Doe
+
 ```
