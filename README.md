@@ -222,18 +222,31 @@ class Foo  {
 #### TypeScript
 ```ts
 const person = {
-  "name": "John Doe" 
+  name: "John Doe" 
 }
+// stringify
 const personJson = JSON.stringify(person);
 console.log(personJson); // '{ "name": "John Doe", "age": 33 }'
 
-var person = JSON.parse('{ "name": "John Doe", "age": 33 }');
+// parse
+const personObject = JSON.parse('{ "name": "John Doe", "age": 33 }');
+console.log(personObject.name) // John Doe
 ```
 
 #### Dart/Flutter
 ```dart
 import 'dart:convert';
 
-var person = jsonDecode('{ "name": "John Doe", "age": 33 }');
-```
+Map person = {
+  "name": "John Doe"
+};
 
+// stringify
+var personJson = jsonEncode(person);
+print(personJson); // '{ "name": "John Doe", "age": 33 }'
+
+// parse
+Map personMap = jsonDecode('{ "name": "John Doe", "age": 33 }');
+print(personMap["name"]) // John Doe
+
+```
